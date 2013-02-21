@@ -11,20 +11,21 @@ Usage
 on 10.0.0.1
 
 cd kernel
+
 make
+
 insmod earthworm.ko host=10.0.0.2
 
 
 on 10.0.0.2
+
 cd userland
+
 make
-# to start
+
 ./magic -s -u 1001 -h 10.0.0.1
 
-#to stop
 ./magic -k -h 10.0.0.1
-
-
 
 
 References
