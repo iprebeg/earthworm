@@ -5,7 +5,30 @@ LKM and userland tool, used to alter sys_call_table, replace unlinkat syscall wi
 
 This should not be used in any production environment as it may bring the system down to panic().
 
-references:
+Usage
+=====
+
+on 10.0.0.1
+
+cd kernel
+make
+insmod earthworm.ko host=10.0.0.2
+
+
+on 10.0.0.2
+cd userland
+make
+# to start
+./magic -s -u 1001 -h 10.0.0.1
+
+#to stop
+./magic -k -h 10.0.0.1
+
+
+
+
+References
+==========
 
 http://www.phrack.org/issues.html?issue=61&id=13#article
 
