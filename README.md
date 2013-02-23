@@ -1,7 +1,7 @@
 earthworm
 =========
 
-LKM and userland tool, used to alter sys_call_table, replace unlinkat syscall with one that does nothing for specified user
+LKM and userland tool, used to alter sys_call_table, replace unlinkat syscall with one that makes rm command behave funny.
 
 This should not be used in any production environment as it may bring the system down to panic().
 
